@@ -10,12 +10,6 @@ export default function NavBar(props) {
                 <li>
                     <Link to="/">Home</Link>
                 </li>
-                <li>
-                    <Link to="/fruits">Fruits</Link>
-                </li>
-                <li>
-                    <Link to="/cars">Cars</Link>
-                </li>
             </ul>
         </div>
     );
