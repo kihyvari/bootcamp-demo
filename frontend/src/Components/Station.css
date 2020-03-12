@@ -1,6 +1,11 @@
 .stations {
-    background-color: yellow;
+    background-color: rgb(122, 122, 56);
     width: 400px;
     padding: 10px 20px;
     overflow: auto;
   }
+
+.type {
+  text-align: center;
+  color: red;
+}

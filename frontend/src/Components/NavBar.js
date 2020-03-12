@@ -13,6 +13,9 @@ export default function NavBar(props) {
                 <li>
                     <Link to="/stationList">Asemalista (ei oikeasti!)</Link>
                 </li>
+                <li>
+                    <Link to="/StationTable">Taulukkoja</Link>
+                </li>
             </ul>
         </div>
     );

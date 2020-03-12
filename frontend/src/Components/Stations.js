@@ -25,7 +25,15 @@ export default function Stations(props) {
            key={stationData.stationUICCode} 
            type={stationData.type}
            >
-                {stationData.stationName}
+                {stationData.key},
+                {stationData.stationName},
+                {stationData.type},
+                {stationData.stationShortCode},
+                {stationData.stationUICCode},
+                {stationData.countryCode},
+                {stationData.longitude},
+                {stationData.latitude}
+                
            </Station>
         }
     )

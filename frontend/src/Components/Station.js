@@ -6,7 +6,7 @@ import "./Station.css";
 
 export default function Station(props) {
   return (
-    <div className={`station ${props.type}`}>
+    <div className={`station ${props}`}>
        {props.children}
     </div>
   );
