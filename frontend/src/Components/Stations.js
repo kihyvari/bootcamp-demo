@@ -26,6 +26,7 @@ export default function Stations(props) {
            type={stationData.type}
            >
                 {stationData.key},
+                {stationData.passengerTraffic},
                 {stationData.stationName},
                 {stationData.type},
                 {stationData.stationShortCode},

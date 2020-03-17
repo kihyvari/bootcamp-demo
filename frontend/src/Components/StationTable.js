@@ -36,6 +36,7 @@ const Styles = styled.div`
 	}
 `;
 
+
 /*
 export default function NavBar(props) {
     return (
@@ -57,12 +58,13 @@ export default function StationTable() {
 	const columns = React.useMemo(
 		() => [
 			{
-				Header: "Passenger traffic",
-				accessor: "passengerTraffic",
-			},
-			{
 				Header: "Type",
 				accessor: "type",
+			},
+			{
+				Header: "Passenger traffic",
+				id: "passengerTraffic",
+				accessor: d => d.passengerTraffic.toString(),
 			},
 
 			{
@@ -87,8 +89,8 @@ export default function StationTable() {
     );
     
     // const data = React.useMemo(() => makeData(20), [])
-
 	
+	 
 	return (
 		<Styles>
 			<Table columns={columns} data={fakeData} />

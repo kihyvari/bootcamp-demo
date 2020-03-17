@@ -11,6 +11,16 @@ export default function Corona(props) {
         }
         fetchData();
     }, [])
+
+
+    // console.log(coronaData);
+
+
+    const counts = ((coronaData || {}).confirmed || []).reduce((result, caseA) => ({
+      ...result,
+      [caseA.healthCareDistrict]: (result[caseA.healthCareDistrict] || 0) + 1 
+    }), {});
+    console.log(counts)
     return <div>
         {JSON.stringify(counts, null, 2)}
     </div>;

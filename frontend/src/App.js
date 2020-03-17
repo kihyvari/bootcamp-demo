@@ -5,6 +5,7 @@ import Stations from "./Components/Stations";
 import StationTable from "./Components/StationTable";
 import Home from './Components/Home';
 import NavBar from "./Components/NavBar";
+import Corona from "./Components/Corona";
 import './App.css';
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/" component={Home}/>
         <Route path="/stationList"><Stations /></Route>
         <Route path="/StationTable"><StationTable /></Route>
+        <Route path="/Corona"><Corona /></Route>
         <Route render={() => "404 - Not Found!"} />
       </Switch>
     </Router>
