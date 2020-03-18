@@ -1,5 +1,3 @@
-//muutettu stationiksi
-
 import React, { useState, useEffect } from "react";
 
 import Station from "./Station";

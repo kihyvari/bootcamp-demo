@@ -1,38 +1,29 @@
-const stationList = [
-  {
-    "passengerTraffic": false,
-    "type": "STATION",
-    "stationName": "Ahonpää",
-    "stationShortCode": "AHO",
-    "stationUICCode": 1343,
-    "countryCode": "FI",
-    "longitude": 25.006783,
-    "latitude": 64.53711800000001
-  },
-  {
-    "passengerTraffic": false,
-    "type": "STATION",
-    "stationName": "Ahvenus",
-    "stationShortCode": "AHV",
-    "stationUICCode": 1000,
-    "countryCode": "FI",
-    "longitude": 22.498185,
-    "latitude": 61.291923
-  },
-  {
-    "passengerTraffic": true,
-    "type": "STOPPING_POINT",
-    "stationName": "Ainola",
-    "stationShortCode": "AIN",
-    "stationUICCode": 628,
-    "countryCode": "FI",
-    "longitude": 25.101494,
-    "latitude": 60.456863
-  }
-];
+/*
 
-const getStations = (req, res) => res.send(stationList);
+import React, {useState, useEffect} from 'react';
 
-module.exports = {
-    getStations
-};
+
+export default function stationList(props) {
+    const [stationData, setStationData] = useState({});
+
+    useEffect(() => {
+        const fetchData = () => {
+            fetch('https://rata.digitraffic.fi/api/v1/live-trains?station=JNS')
+                .then(response => response.json())
+                .then(data => setStationData(data))
+        }
+        fetchData();
+    }, [])
+
+
+    console.log(stationData);
+
+
+    const liveTrains = ((stationData || {}).trainType || []);
+    console.log(liveTrains)
+    return <div>
+        {JSON.stringify(liveTrains, null, 2)}
+    </div>;
+}
+
+*/
