@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Stations from "./Components/Stations";
 import StationTable from "./Components/StationTable";
+import StationTableTrue from "./Components/StationTableTrue";
 import Home from './Components/Home';
 import NavBar from "./Components/NavBar";
 import Corona from "./Components/Corona";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/stationList"><Stations /></Route>
         <Route path="/StationTable"><StationTable /></Route>
         <Route path="/Corona"><Corona /></Route>
+        <Route path="/StationTableTrue"><StationTableTrue /></Route>
         <Route render={() => "404 - Not Found!"} />
       </Switch>
     </Router>

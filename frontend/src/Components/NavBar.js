@@ -14,10 +14,13 @@ export default function NavBar(props) {
                     <Link to="/stationList">Asemalista (ei oikeasti!)</Link>
                 </li>
                 <li>
-                    <Link to="/StationTable">Taulukkoja</Link>
+                    <Link to="/StationTable">Taulukkoja, mutta feikkidatasta</Link>
                 </li>
                 <li>
                     <Link to="/Corona">Koronaa</Link>
+                </li>
+                <li>
+                    <Link to="/StationTableTrue">Tositaulukkoja JNS</Link>
                 </li>
             </ul>
         </div>

@@ -5,20 +5,12 @@ import React, { useState, useEffect } from "react";
 // import "./Stations.css";
 
 // HUOM JNS ASEMAN LÄPI KULKEVAT JUNAT
+const url = 'https://rata.digitraffic.fi/api/v1/live-trains?station=JNS';
 
-export default function Stations(props) {
-    const setStations = useState([]);
-
-    useEffect(() => {
-        function fetchData() {
-            fetch('https://rata.digitraffic.fi/api/v1/live-trains?station=JNS')
-                .then(res => res.json())
-                .then(data => setStations(data))
-                .catch(err => console.log(err));     
-        }
-        fetchData();
-    }, []);
-
+export default function getData(url) {
+    return fetch(url)
+        .then(response => response.json())       
+};
     
 /*
     const stationElements = stations.map(
@@ -45,7 +37,6 @@ export default function Stations(props) {
         </React.Fragment>
       
     );
- 
-}
 
+}
 */

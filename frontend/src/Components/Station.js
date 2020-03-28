@@ -1,4 +1,4 @@
-//fruitit stationeiksi!
+// Tää oli ennen tärkeä Stations-js:ää varten
 
 import React from "react";
 // import PropTypes from "prop-types" (toivottavasti mikään ei hajoa!)

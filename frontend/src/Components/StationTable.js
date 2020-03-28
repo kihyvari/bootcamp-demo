@@ -1,9 +1,11 @@
+/*
+
 import React from "react";
 // import { useTable } from "react-table";
 
 import styled from "styled-components";
-import Table from "./Table"
-import fakeData from './fakeData.json'
+import Table from "./Table";
+import fakeData from './fakeData.json';
 
 // const fakeData = require('./fakeData.json')
 
@@ -37,7 +39,7 @@ const Styles = styled.div`
 `;
 
 
-/*
+
 export default function NavBar(props) {
     return (
         <div className="nav-bar">
@@ -52,7 +54,7 @@ export default function NavBar(props) {
         </div>
     );
 }
-*/
+
 
 export default function StationTable() {
 	const columns = React.useMemo(
@@ -97,3 +99,5 @@ export default function StationTable() {
 		</Styles>
 	);
 }
+
+*/
