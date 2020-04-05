@@ -7,6 +7,9 @@ import StationTableTrue from "./Components/StationTableTrue";
 import Home from './Components/Home';
 import NavBar from "./Components/NavBar";
 import Corona from "./Components/Corona";
+import MapBox from './Components/MapBox';
+import GetStation from './Components/GetStation';
+import GetTrains from './Components/GetTrains';
 import './App.css';
 
 
@@ -22,6 +25,9 @@ function App() {
         <Route path="/StationTable"><StationTable /></Route>
         <Route path="/Corona"><Corona /></Route>
         <Route path="/StationTableTrue"><StationTableTrue /></Route>
+        <Route path="/MapBox"><MapBox /></Route>
+        <Route path="/GetStation"><GetStation /></Route>
+        <Route path="/GetTrains"><GetTrains /></Route>
         <Route render={() => "404 - Not Found!"} />
       </Switch>
     </Router>

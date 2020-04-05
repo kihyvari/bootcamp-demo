@@ -22,6 +22,15 @@ export default function NavBar(props) {
                 <li>
                     <Link to="/StationTableTrue">Tositaulukkoja JNS</Link>
                 </li>
+                <li>
+                    <Link to="/MapBox">Skeittikartta</Link>
+                </li>
+                <li>
+                    <Link to="/GetStation">Asemakartta</Link>
+                </li>
+                <li>
+                    <Link to="/GetTrains">Junat kartalla</Link>
+                </li>
             </ul>
         </div>
     );

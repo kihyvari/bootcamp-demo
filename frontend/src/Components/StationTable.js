@@ -1,11 +1,11 @@
-/*
+
 
 import React from "react";
 // import { useTable } from "react-table";
 
 import styled from "styled-components";
 import Table from "./Table";
-import fakeData from './fakeData.json';
+import fakeData from './Data/fakeData.json';
 
 // const fakeData = require('./fakeData.json')
 
@@ -37,23 +37,6 @@ const Styles = styled.div`
 		}
 	}
 `;
-
-
-
-export default function NavBar(props) {
-    return (
-        <div className="nav-bar">
-            <ul>   
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/stationList">Asemalista (ei oikeasti!)</Link>
-                </li>
-            </ul>
-        </div>
-    );
-}
 
 
 export default function StationTable() {
@@ -100,4 +83,3 @@ export default function StationTable() {
 	);
 }
 
-*/

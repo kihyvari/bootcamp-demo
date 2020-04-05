@@ -56,7 +56,7 @@ function StationTableTrue() {
 						Header: "Time table type",
 						accessor: "timetableType",
 						/* Cell method will provide the cell value, we pass it to render a custom component
-						Cell: ({ cell: { value } }) => <TimeTableRows values={value} />,
+						Cell: ({ cell: { value } }) => <TimeTableRows values={value} />, (BUT HERE'S NO CELL METHOD USED)
 						*/
 					},
 					{
@@ -64,11 +64,22 @@ function StationTableTrue() {
 						accessor: d => d.runningCurrently.toString(),
 					},
 					{
-						Header: "Cancelled?",
+						Header: "Cancelled",
 						accessor: d => d.cancelled.toString(),
 					},
 				],
 			},
+			{
+				// Third group - Details
+				Header: "Time table",
+				// Third group columns
+				columns: [
+					{
+						Header: "Departure time",
+						accessor: d => d.timeTableRows[0].scheduledTime.toLocaleString(),
+					}
+				],
+			}
 		],
 		[],
 	);
@@ -77,7 +88,7 @@ function StationTableTrue() {
 
 	useEffect(() => {
 		(async () => {
-			const result = await axios("https://rata.digitraffic.fi/api/v1/live-trains?station=JNS");
+			const result = await axios("https://rata.digitraffic.fi/api/v1/live-trains/station/JNS?arrived_trains=5&arriving_trains=5&departed_trains=5&departing_trains=5&include_nonstopping=false&train_categories=Commuter,Long-distance");
 			setData(result.data);
 		})();
 	}, []);
