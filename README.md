@@ -1,10 +1,9 @@
-# Hieno bootcamp-demo #
+# Neat bootcamp-demo #
 
-Dokumentointi on työn alla
+Documentation is a work in progress
 
 ## Requirements
     * Node 12
-    * Visual Studio Code
 
   
 
