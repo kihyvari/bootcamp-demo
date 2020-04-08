@@ -1,5 +1,11 @@
-<<<<<<< HEAD
-# Code bootcamp demo project
+# Neat bootcamp-demo #
+
+   * Demo project about visualizing railway traffic data from digitraffic.fi/api
+
+   * Mostly a playground with random features
+
+   * Documentation is a work in progress
+=======
 ## Setup
 ### Requirements
  * Node 12
@@ -42,17 +48,6 @@ cd..
  cd backend
  npm install
  npm run start-dev
-=======
-# Neat bootcamp-demo #
 
-   * Demo project about visualizing railway traffic data from digitraffic.fi/api
-
-   * Mostly a playground with random features
-
-   * Documentation is a work in progress
-
-## Requirements
-    * TBA
->>>>>>> origin/master
 
 
