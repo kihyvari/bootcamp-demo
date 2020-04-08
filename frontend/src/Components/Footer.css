@@ -1,0 +1,24 @@
+.footer {
+    /* position: fixed; // Flex test 
+	left: 0;
+	bottom: 0;
+	width: 100%; */ 
+	background-color: #1e1e26d1;
+	flex-shrink: 0; /* New Stuff */
+	padding: 15px;
+	color: #b6b7bc;
+}
+
+
+.footer a {
+	color: whitesmoke;
+}
+
+
+.footer li {
+	margin: 5px 10px;
+	width: auto;
+	height: auto;
+	float: center;
+	list-style-type: none;
+}

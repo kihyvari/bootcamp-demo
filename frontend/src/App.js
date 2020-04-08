@@ -6,6 +6,7 @@ import StationTable from "./Components/StationTable";
 import StationTableTrue from "./Components/StationTableTrue";
 import Home from './Components/Home';
 import NavBar from "./Components/NavBar";
+import Footer from "./Components/Footer";
 import Corona from "./Components/Corona";
 import MapBox from './Components/MapBox';
 import GetStation from './Components/GetStation';
@@ -30,6 +31,7 @@ function App() {
         <Route path="/GetTrains"><GetTrains /></Route>
         <Route render={() => "404 - Not Found!"} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

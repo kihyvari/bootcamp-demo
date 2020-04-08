@@ -76,7 +76,7 @@ function StationTableTrue() {
 				columns: [
 					{
 						Header: "Departure time",
-						accessor: d => d.timeTableRows[0].scheduledTime.toLocaleString(),
+						accessor: d => d.timeTableRows[0].scheduledTime.toLocaleString('fi-FI', { timeZone: 'UTC'}),
 					}
 				],
 			}

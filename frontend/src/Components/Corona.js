@@ -23,5 +23,5 @@ export default function Corona(props) {
 		{},
 	);
 	console.log(counts);
-	return <div>{JSON.stringify(counts, null, 2)}</div>;
+	return <div class="content">{JSON.stringify(counts, null, 2)}</div>;
 }

@@ -1,7 +1,10 @@
 .nav-bar {
-    background-color: darkblue;
-    overflow: auto;
-    
+    background-color: #0a9e97;
+    /* overflow: auto; // For the Flex-test */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* this is optional and should be different for every project */
+    display: inline-flex;
 }
 
 .nav-bar a {
@@ -23,14 +26,8 @@
     padding: 10px;
 }
 
-/* STicky? 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-} */
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0)
 .sticky + .content {
     padding-top: 60px;
 }
+*/
