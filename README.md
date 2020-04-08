@@ -5,7 +5,7 @@
    * Mostly a playground with random features
 
    * Documentation is a work in progress
-=======
+
 ## Setup
 ### Requirements
  * Node 12
