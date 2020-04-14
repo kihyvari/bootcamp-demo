@@ -18,8 +18,15 @@ export default function GetStation() {
 
 	React.useEffect(() => {
 		function fetchData() {
-			getStationData().then(data => setStationData({...data, features: data.features.filter(feature => feature.properties.passengerTraffic === true)})
-			)}
+			getStationData().then((data) =>
+				setStationData({
+					...data,
+					features: data.features.filter(
+						(feature) => feature.properties.passengerTraffic === true,
+					),
+				}),
+			);
+		}
 		fetchData();
 	}, []);
 
@@ -34,7 +41,7 @@ export default function GetStation() {
 				attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 			/>
 			{stationData &&
-				stationData.features.map(station => (
+				stationData.features.map((station) => (
 					<Marker
 						key={station.properties.stationUICCode}
 						position={[

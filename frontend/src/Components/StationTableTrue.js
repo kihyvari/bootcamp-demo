@@ -4,23 +4,6 @@ import axios from "axios";
 import Table from "./Table";
 import "./StationTableTrue.css";
 
-/* Custom component to render timeTableRows
-const TimeTableRows = ({ values }) => {
-	// Loop through the array and create a badge-like component instead of comma-separated string
-	return (
-		<>
-			{values.map((timeTableRows, idx) => {
-				return (
-					<span key={idx} className="badge">
-						{timeTableRows}
-					</span>
-				);
-			})}
-		</>
-	);
-};
-*/
-
 function StationTableTrue() {
 	/* 
     - Columns is a simple array right now, but it will contain some logic later on. It is recommended by react-table to Memoize the columns data
@@ -29,9 +12,7 @@ function StationTableTrue() {
 	const columns = useMemo(
 		() => [
 			{
-				// first group - TV Show
-				Header: "Train-y things",
-				// First group columns
+				Header: "Train",
 				columns: [
 					{
 						Header: "Train type",
@@ -44,42 +25,41 @@ function StationTableTrue() {
 				],
 			},
 			{
-				// Second group - Details
-				Header: "Details",
-				// Second group columns
+				Header: "Status",
 				columns: [
 					{
-						Header: "Departure date",
-						accessor: "departureDate",
-					},
-					{
-						Header: "Time table type",
-						accessor: "timetableType",
-						/* Cell method will provide the cell value, we pass it to render a custom component
-						Cell: ({ cell: { value } }) => <TimeTableRows values={value} />, (BUT HERE'S NO CELL METHOD USED)
-						*/
-					},
-					{
 						Header: "Running",
-						accessor: d => d.runningCurrently.toString(),
+						accessor: (d) => d.runningCurrently.toString(),
 					},
 					{
 						Header: "Cancelled",
-						accessor: d => d.cancelled.toString(),
+						accessor: (d) => d.cancelled.toString(),
 					},
 				],
 			},
 			{
-				// Third group - Details
 				Header: "Time table",
-				// Third group columns
 				columns: [
 					{
+						Header: "Departure station",
+						accessor: "timeTableRows[0].stationShortCode",
+					},
+					{
 						Header: "Departure time",
-						accessor: d => d.timeTableRows[0].scheduledTime.toLocaleString('fi-FI', { timeZone: 'UTC'}),
-					}
+						accessor: (d) => d.timeTableRows[0].scheduledTime.toLocaleString(),
+					},
+					{
+						Header: "Arrival station",
+						accessor: (d) =>
+							d.timeTableRows[d.timeTableRows.length - 1].stationShortCode,
+					},
+					{
+						Header: "Arrival time",
+						accessor: (d) =>
+							d.timeTableRows[d.timeTableRows.length - 1].scheduledTime,
+					},
 				],
-			}
+			},
 		],
 		[],
 	);
@@ -88,13 +68,19 @@ function StationTableTrue() {
 
 	useEffect(() => {
 		(async () => {
-			const result = await axios("https://rata.digitraffic.fi/api/v1/live-trains/station/JNS?arrived_trains=5&arriving_trains=5&departed_trains=5&departing_trains=5&include_nonstopping=false&train_categories=Commuter,Long-distance");
+			const result = await axios(
+				"https://rata.digitraffic.fi/api/v1/live-trains/station/JNS?arrived_trains=5&arriving_trains=5&departed_trains=5&departing_trains=5&include_nonstopping=false&train_categories=Commuter,Long-distance",
+			);
 			setData(result.data);
 		})();
 	}, []);
 
 	return (
+		
 		<div className="App">
+		<p className="stationTableTrue">
+		Joensuun juna-aseman kautta kulkevat junat 
+		</p>
 			<Table columns={columns} data={data} />
 		</div>
 	);

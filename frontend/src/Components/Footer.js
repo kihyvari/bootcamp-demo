@@ -6,7 +6,9 @@ export default function Footer(props) {
 		<footer className="footer">
 			<li>
 				{" "}
-				<a href="https://github.com/kihyvari/bootcamp-demo">GitHub</a>{" "}
+				
+				<a href="https://github.com/kihyvari/bootcamp-demo"><img alt="GitHub" src="/GitHub-Mark-32px.png"
+         width="35" height="35"/></a>{" "}
 			</li>
 
 			<li>

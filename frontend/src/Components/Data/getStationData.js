@@ -12,27 +12,3 @@ exports.getStationData = data => {
 		});
 };
 
-
-//Old code
-/*
-export const getStationData = () => fetch("https://rata.digitraffic.fi/api/v1/metadata/stations.geojson")
-  .then(response => response.json())
-    // Work with JSON data here
-
-
-
-
-
-fetch('https://rata.digitraffic.fi/api/v1/metadata/stations.geojson')
-  .then(response => {
-    return response.json()
-  })
-  .then(data => {
-    // Work with JSON data here
-    console.log(data)
-  })
-  .catch(err => {
-    // Do something for an error here
-  })
-
-*/

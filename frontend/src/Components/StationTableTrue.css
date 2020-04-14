@@ -1,6 +1,9 @@
 table {
     border-spacing: 0;
     border: 1px solid #ededed;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-bottom: 5%;
   }
   table tr:last-child td {
     border-bottom: 0;

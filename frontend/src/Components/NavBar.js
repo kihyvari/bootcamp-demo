@@ -11,22 +11,13 @@ export default function NavBar(props) {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/stationList">Asemalista (ei oikeasti!)</Link>
+                    <Link to="/StationTable">Asemataulukko, Pagination ja Search</Link>
                 </li>
                 <li>
-                    <Link to="/StationTable">Taulukkoja, mutta feikkidatasta</Link>
+                    <Link to="/StationTableTrue">Junataulukko JNS-asema</Link>
                 </li>
                 <li>
-                    <Link to="/Corona">Koronaa</Link>
-                </li>
-                <li>
-                    <Link to="/StationTableTrue">Tositaulukkoja JNS</Link>
-                </li>
-                <li>
-                    <Link to="/MapBox">Skeittikartta</Link>
-                </li>
-                <li>
-                    <Link to="/GetStation">Asemakartta</Link>
+                    <Link to="/GetStation">Juna-asemat kartalla</Link>
                 </li>
                 <li>
                     <Link to="/GetTrains">Junat kartalla</Link>

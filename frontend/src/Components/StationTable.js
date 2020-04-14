@@ -1,16 +1,23 @@
-
+// Feikkitaulukko asemista react-tablen paginaatiota varten
 
 import React from "react";
-// import { useTable } from "react-table";
 
 import styled from "styled-components";
 import Table from "./Table";
-import fakeData from './Data/fakeData.json';
-
-// const fakeData = require('./fakeData.json')
+import fakeData from "./Data/fakeData.json";
 
 const Styles = styled.div`
 	padding: 1rem;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+
+	.stationTable {
+		margin-top: 1%;
+		margin-left: 5%;
+		text-align: left;
+		font-size: 24px;
+	}
 
 	table {
 		border-spacing: 0;
@@ -38,7 +45,6 @@ const Styles = styled.div`
 	}
 `;
 
-
 export default function StationTable() {
 	const columns = React.useMemo(
 		() => [
@@ -49,7 +55,7 @@ export default function StationTable() {
 			{
 				Header: "Passenger traffic",
 				id: "passengerTraffic",
-				accessor: d => d.passengerTraffic.toString(),
+				accessor: (d) => d.passengerTraffic.toString(),
 			},
 
 			{
@@ -71,15 +77,14 @@ export default function StationTable() {
 		],
 
 		[],
-    );
-    
-    // const data = React.useMemo(() => makeData(20), [])
-	
-	 
+	);
+
 	return (
 		<Styles>
+			<p className="stationTable">
+				Epäonnistuneiden ominaisuuksien (pagination & search) muistosivu
+			</p>
 			<Table columns={columns} data={fakeData} />
 		</Styles>
 	);
 }
-
